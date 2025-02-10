@@ -21,7 +21,7 @@ We aim to successfully predict the percentage of an artist's playtime across all
     - **K-Means**: We will group songs and artists based on playtime similarity.
 
 ## Visualization
- Bar Graphs.
+ Using Bar Graphs to keep track of percentages for each artist on how much of there song will be played under certain conditions.
 
 ## Test Plan
 Withhold 20% of data for test, train on data collected in March, and test on data collected in April.
