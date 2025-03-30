@@ -29,7 +29,9 @@ PROJECT_NAME so far is a prediction model that predicts whether a song will be s
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
 - **Conditional Probability**:
-    - (../Desktop/cs506/images/condprob.png)
+![conditional probability](https://github.com/user-attachments/assets/83040f8a-b33a-4abb-a813-39da7ba13e14)
+    - EXPLANATION
+
 INCLUDE IMAGES OF VISUALIZATIONS WITH EXPLANATIONS.
 
 ## Test Plan
