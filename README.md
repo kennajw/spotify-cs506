@@ -28,8 +28,7 @@ PROJECT_NAME so far is a prediction model that predicts whether a song will be s
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
 - **Conditional Probability**:
-<br>
-![conditional probability](https://github.com/user-attachments/assets/83040f8a-b33a-4abb-a813-39da7ba13e14)
+    - ![conditional probability](https://github.com/user-attachments/assets/83040f8a-b33a-4abb-a813-39da7ba13e14)
     - We calculated conditional probabilities in order to get a better idea of the relationship between shuffling and skipping a song.
         - **P(Skipping | Shuffle)**
         - **P(Not Skipping | Not Shuffle)**
@@ -39,8 +38,7 @@ We utilized matplotlib to model various probabilities as well as correlation.
 
 
 - **Probability of Skipping/Finishing**:
-<br>
-![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
+    - ![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
     - We used a predictive model to find this where we looked at each value and gave it an associated value based on whether that number is more associated with Skipping, or finishing the song. This will likely later be adapted into a pdf but for now it is checking the percent at that specific value. The scale on the bottom is how many ms have passed in intervals of 31222.5 for every one, and the y scale is the percentage of those intervals which is skipped or finished based on the graph.
 
 ## Test Plan
