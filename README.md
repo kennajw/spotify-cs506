@@ -24,22 +24,26 @@ PROJECT_NAME so far is a prediction model that predicts whether a song will be s
 ## Modeling
 - **Clustering**:
     - For our preliminary results, we decided to use a DBC scan clustering model to predict where and how these clusters may look. This did not give us as good of a representation as we wanted but it was effective in showing certain aspects of the association between varaibles.
+    - <img width="414" alt="Screenshot 2025-03-30 at 2 46 51 PM" src="https://github.com/user-attachments/assets/9668645c-46ee-45ed-a389-4ece352a330c" />
+
 
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
 - **Conditional Probability**:
     - ![conditional probability](https://github.com/user-attachments/assets/83040f8a-b33a-4abb-a813-39da7ba13e14)
     - We calculated conditional probabilities in order to get a better idea of the relationship between shuffling and skipping a song.
-        - **P(Skipping | Shuffle)**
-        - **P(Not Skipping | Not Shuffle)**
-        - **P(Skipping | Not Shuffle)**
-        - **P(Not Skipping | Shuffle)**
+        - **P(Skipping | Shuffle)** = 0.54
+        - **P(Not Skipping | Not Shuffle)** = 0.68
+        - **P(Skipping | Not Shuffle)** = 0.32
+        - **P(Not Skipping | Shuffle)** = 0.46
 
 
 
 - **Probability of Skipping/Finishing**:
     - ![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
     - We used a predictive model to find this where we looked at each value and gave it an associated value based on whether that number is more associated with Skipping, or finishing the song. This will likely later be adapted into a pdf but for now it is checking the percent at that specific value. The scale on the bottom is how many ms have passed in intervals of 31222.5 for every one, and the y scale is the percentage of those intervals which is skipped or finished based on the graph.
+
+
 
 ## Test Plan
 Withhold 20% of data for test, train on data collected in March, and test on data collected in April.
