@@ -22,9 +22,8 @@ PROJECT_NAME so far is a prediction model that predicts whether a song will be s
 - **Standardization**: Normalize CSV file by extracting the above features using `pandas` or a similar package.
 
 ## Modeling
-- **Decision Tree**:
+- **Clustering**:
     - For our preliminary results, we decided to use a DBC scan clustering model to predict where and how these clusters may look. This did not give us as good of a representation as we wanted but it was effective in showing certain aspects of the association between varaibles.
-    - DATA MODELING SPECIFICS
 
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
