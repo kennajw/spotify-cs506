@@ -1,4 +1,5 @@
 # Skipify
+https://www.youtube.com/watch?v=r7YUa3ZnwS4
 
 ## Goals
 We aim to successfully predict whether any given song playing on Spotify will be skipped. We also hope to design our model such that we can predict a specific artist's playtime for any of their tracks by optimizing our model with generalized data and then tailoring it to an artist's discography. We want to compare time listened to multiple other variables listed below which we believe might have an impact on the outcome of whether a song is skipped, and how long it is listened to if it is skipped.
