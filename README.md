@@ -23,7 +23,7 @@ PROJECT_NAME so far is a prediction model that predicts whether a song will be s
 
 ## Modeling
 - **Decision Tree**:
-    - For our preliminary results, we decided to use a decision tree to predict whether a song gets skipped or not. For the final version of our project, we will compare the dataset on several models (including decision trees) to make a prediction.
+    - For our preliminary results, we decided to use a DBC scan clustering model to predict where and how these clusters may look. This did not give us as good of a representation as we wanted but it was effective in showing certain aspects of the association between varaibles.
     - DATA MODELING SPECIFICS
 
 ## Visualization
@@ -33,7 +33,7 @@ We utilized matplotlib to model various probabilities as well as correlation.
     - EXPLANATION
 - **Probability of Skipping/Finishing**:
 ![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
-    - EXPLANATION
+    - We used a predictive model to find this where we looked at each value and gave it an associated value based on whether that number is more associated with Skipping, or finishing the song. This will likely later be adapted into a pdf but for now it is checking the percent at that specific value. The scale on the bottom is how many ms have passed in intervals of 31222.5 for every one, and the y scale is the percentage of those intervals which is skipped or finished based on the graph.
 
 ## Test Plan
 Withhold 20% of data for test, train on data collected in March, and test on data collected in April.
