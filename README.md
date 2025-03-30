@@ -18,7 +18,7 @@ PROJECT_NAME so far is a prediction model that predicts whether a song will be s
  We will be modeling based on 80% of data, keeping 20% for testing our results.
 
 ## Data Cleaning
-- **Data CLeaning**: Cleaned the data for the trackDone column of the dataset to streamline the processing of that specific data in our preliminary decision tree.
+- **Data Cleaning**: Cleaned the data for the trackDone column of the dataset to streamline the processing of that specific data in our preliminary decision tree.
 - **Standardization**: Normalize CSV file by extracting the above features using `pandas` or a similar package.
 
 ## Modeling
