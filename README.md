@@ -31,8 +31,9 @@ We utilized matplotlib to model various probabilities as well as correlation.
 - **Conditional Probability**:
 ![conditional probability](https://github.com/user-attachments/assets/83040f8a-b33a-4abb-a813-39da7ba13e14)
     - EXPLANATION
-
-INCLUDE IMAGES OF VISUALIZATIONS WITH EXPLANATIONS.
+- **Probability of Skipping and Probability of Finishing**:
+![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
+    - EXPLANATION
 
 ## Test Plan
 Withhold 20% of data for test, train on data collected in March, and test on data collected in April.
