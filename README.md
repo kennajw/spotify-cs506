@@ -16,17 +16,19 @@ Skipify consists of 2 prediction models that predict whether a song/track will b
     - **reason_start**: The reason why the track started playing (e.g., user selection, autoplay, recommendation).
     - **reason_end**: The reason why the track stopped playing (e.g., natural end, user skip, interruption).
     - **shuffle**: Indicates whether shuffle mode was active during playback (TRUE or FALSE).
- We will be modeling based on 80% of data, keeping 20% for testing our results.
+    - **platform**: The device or platform used to stream the track (e.g., mobile, desktop, web player).
+      
+ Our model trained on 75% of data, keeping 25% for testing our results.
 
 ## Data Cleaning
-- **Data Cleaning**: Cleaned the data for the trackDone column of the dataset to streamline the processing of that specific data in our preliminary decision tree.
+- **Data Cleaning**: Cleaned the data for the trackDone column of the dataset to streamline the processing of that specific data, converting it to a csv, which we used in our preliminary decision tree.
 - **Standardization**: Normalize CSV file by extracting the above features using `pandas` or a similar package.
 
 ## Modeling
 - **SVM**:
-    - We chose to do a Support Vector Machine (SVM) model to predict whether a track will be skipped or not and how long a track will be played. Before fitting our model to the data, we split the training and testing set by 75% and 25% respectively. Then, we do a number of preprocessing steps by creating various pipelines and transform the columns of those pipelines using Column Transformer. Before that, we preprocess the categorical data using One Hot Encoder and numerical data using both a Simple Imputer and Standard Scaler. Finally we feed this into LinearSVC model, setting the various parameters.
-    - We also created 2 different models that predict 2 different things. The base of the model is the same (the model described in the point above). The first model predicts our first goal of the project which is whether a track will be skipped. The second model just changes the target column from reason_end to ms_played, allowing us to predict how many ms of a track will be played.
-    - Initially, we only created 1 model that predicted the reason_end, not just predicting whether it is skipped or not (so predicting every possible reason_end). This gave our initial model approximately an 84% accuracy. Since our goal was more specific, we then changed it just to predict whether it would be skipped or not, which improved the accuracy of our model.
+    - We chose to do a `Support Vector Machine (SVM)` model to predict whether a track will be skipped or not and how long a track will be played. Before fitting our model to the data, we split the training and testing set by 75% and 25% respectively. Then, we completed a number of preprocessing steps by creating various pipelines and transforming the columns of those pipelines using `Column Transformer`. Before that, we preprocessed the categorical data using `One Hot Encoder` and numerical data using both a `Simple Imputer` and `Standard Scaler`. Finally we feed this into `LinearSVC model`, setting the various parameters.
+    - We also created two different models which each predict a different target. The base of the model is the same (the model described in the point above). The first model predicts our first goal of the project which is whether a track will be skipped. The second model just changes the target column from reason_end to seconds_played_range, allowing us to predict the range of seconds a track will be played.
+    - Initially, we only created one model that predicted the reason_end, not just predicting whether it is skipped or not (so predicting every possible reason_end). This gave our initial model approximately an 84% accuracy. Since our goal was more specific, we then changed it just to predict whether it would be skipped or not, which improved the accuracy of our model to 96%.
  
 ## Optimization:
 - We optimized our SVM model by creating a function that assigns weights based on Y_train. We then fed these calculated weights into our class_weights parameter of the Linear SVC model.
