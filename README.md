@@ -58,6 +58,23 @@ We utilized matplotlib to model various probabilities as well as correlation.
 - **Probability of Skipping/Finishing**:
     - ![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
     - We used a predictive model to find this where we looked at each value and gave it an associated value based on whether that number is more associated with Skipping, or finishing the song. This will likely later be adapted into a pdf but for now it is checking the percent at that specific value. The scale on the bottom is how many ms have passed in intervals of 31222.5 for every one, and the y scale is the percentage of those intervals which is skipped or finished based on the graph.
+ 
+- **3D Visualization**:
+    - We created an interactive visualization that depicts the relationship between reason_start, shuffle, and secs_played on the initial dataset as seen below:
+    - **Key**:
+        - **yellow**: skipped
+        - **blue**: not skipped        
+     - ![download](https://github.com/user-attachments/assets/900be622-1484-4f81-9175-654481725ceb)
+    - We also created an interactive visualization that the depicts the relationship between reason_start, shuffle, and secs_played on the testing dataset as seen below:
+      - **Key**:
+        - **yellow**: skipped
+        - **blue**: not skipped 
+     - ![download (1)](https://github.com/user-attachments/assets/93b9194c-6941-4a39-b851-3faab782278a)
+
+    - The second graph demonstrates that our model was able to find similar results.
+
+
+
 
 ## Reproducability
 - TO BE FILLED (by Valentina)
