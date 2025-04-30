@@ -1,5 +1,5 @@
 # Skipify
-https://youtu.be/WOrUYCalHAo
+Presentation: https://youtu.be/WOrUYCalHAo
 
 ## Goals
 We aim to successfully predict whether any given song playing on Spotify will be skipped. Our models predict whether a track from a specified artist and album will be skipped and how many ms it will play. We accomplished this by targeting columns of the dataset the ms played and a binary converted column for the reason end (now simply skipped or not skipped). We believe that these insights could be an important tool for Spotify for what songs would be best to share with users.
