@@ -30,8 +30,12 @@ Skipify so far is a prediction model that predicts whether a song will be skippe
 
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
-- **Conditional Probability**:
-    - ![conditional probability](https://github.com/user-attachments/assets/83040f8a-b33a-4abb-a813-39da7ba13e14)
+- **Conditional Probability**: ![Screenshot 2025-04-30 143858](https://github.com/user-attachments/assets/64e62c9b-3d6f-4b64-a204-6a31a7443655)
+- ![Screenshot 2025-04-30 143916](https://github.com/user-attachments/assets/2e25b839-9282-4fa4-a8c0-73f2f2b375e4)
+- ![Screenshot 2025-04-30 143844](https://github.com/user-attachments/assets/b191a9a6-8b4d-4fcc-ad1f-75a315b87d3a)
+
+
+    - 
     - We calculated conditional probabilities in order to get a better idea of the relationship between shuffling and skipping a song.
         - **P(Skipping | Shuffle)** = 0.54
         - **P(Not Skipping | Not Shuffle)** = 0.68
