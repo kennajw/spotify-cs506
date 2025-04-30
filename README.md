@@ -1,11 +1,11 @@
 # Skipify
-https://www.youtube.com/watch?v=r7YUa3ZnwS4
+INSERT FINAL REPORT YOUTUBE LINK
 
 ## Goals
-We aim to successfully predict whether any given song playing on Spotify will be skipped. We also hope to design our model such that we can predict a specific artist's playtime for any of their tracks by optimizing our model with generalized data and then tailoring it to an artist's discography. We want to compare time listened to multiple other variables listed below which we believe might have an impact on the outcome of whether a song is skipped, and how long it is listened to if it is skipped.
+We aim to successfully predict whether any given song playing on Spotify will be skipped. Our models predict whether a track from a specified artist and album will be skipped and how many ms it will play. We accomplished this by targeting columns of the dataset the ms played and a binary converted column for the reason end (now simply skipped or not skipped). We believe that these insights could be an important tool for Spotify for what songs would be best to share with users.
 
 ## Summary
-Skipify so far is a prediction model that predicts whether a song will be skipped from a dataset of streaming history from spotify. We provide several visualizations on the conditional probabilities of shuffling/not shuffling and skipping/finishing as well probability of skipping and finishing. Preliminary results were found by utilizing a decision tree.
+Skipify consists of 2 prediction models that predict whether a song/track will be skipped and how many ms that song will play based on a dataset that represents a user's Spotify streaming history. For these models, we used a Support Vector Machine (SVM) model, specifically Linear SVC to predict these. Below, we provide info on the dataset itself, cleaning, modeling, evaluation, visualizations, and more!
 
 ## Dataset
 - **Source**: We will be using the [Spotify Streaming History](https://www.kaggle.com/datasets/sgoutami/spotify-streaming-history) dataset from Kaggle. 
@@ -23,32 +23,39 @@ Skipify so far is a prediction model that predicts whether a song will be skippe
 - **Standardization**: Normalize CSV file by extracting the above features using `pandas` or a similar package.
 
 ## Modeling
-- **Clustering**:
-    - For our preliminary results, we decided to use a DBC scan clustering model to predict where and how these clusters may look. This did not give us as good of a representation as we wanted but it was effective in showing certain aspects of the association between varaibles.
-    - <img width="414" alt="Screenshot 2025-03-30 at 2 46 51 PM" src="https://github.com/user-attachments/assets/9668645c-46ee-45ed-a389-4ece352a330c" />
+- **SVM**:
+    - We chose to do a Support Vector Machine (SVM) model to predict whether a track will be skipped or not and how long a track will be played. Before fitting our model to the data, we split the training and testing set by 75% and 25% respectively. Then, we do a number of preprocessing steps by creating various pipelines and transform the columns of those pipelines using Column Transformer. Before that, we preprocess the categorical data using One Hot Encoder and numerical data using both a Simple Imputer and Standard Scaler. Finally we feed this into LinearSVC model, setting the various parameters.
+    - We also created 2 different models that predict 2 different things. The base of the model is the same (the model described in the point above). The first model predicts our first goal of the project which is whether a track will be skipped. The second model just changes the target column from reason_end to ms_played, allowing us to predict how many ms of a track will be played.
+    - Initially, we only created 1 model that predicted the reason_end, not just predicting whether it is skipped or not (so predicting every possible reason_end). This gave our initial model approximately an 84% accuracy. Since our goal was more specific, we then changed it just to predict whether it would be skipped or not, which improved the accuracy of our model.
+ 
+## Optimization:
+- We optimized our SVM model by creating a function that assigns weights based on Y_train. We then fed these calculated weights into our class_weights parameter of the Linear SVC model.
 
+## Evaluation:
+- For evaluation, we mainly relied on sklearn.metrics accuracy_score and confusion_matrix functions as well as our visualizations (see section below).
+- **Skipped**:
+    - On the testing set, we were able to achieve a 95.5% accuracy.
+    - Confusion Matrix:
+        - ![confusion_matrix_skipped](https://github.com/user-attachments/assets/abd6d298-a80f-4638-9800-679eec26dd3a)
+- **Seconds Played**:
+    - On the testing set, we were able to achieve a 85% accuracy.
+    - Confusion Matrix:
+        - ![confusion_matrix_seconds_played](https://github.com/user-attachments/assets/fd91bc3d-419c-4452-a266-eea6fb21974a)
 
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
 - **Conditional Probability**: ![Screenshot 2025-04-30 143858](https://github.com/user-attachments/assets/64e62c9b-3d6f-4b64-a204-6a31a7443655)
 - ![Screenshot 2025-04-30 143916](https://github.com/user-attachments/assets/2e25b839-9282-4fa4-a8c0-73f2f2b375e4)
 - ![Screenshot 2025-04-30 143844](https://github.com/user-attachments/assets/b191a9a6-8b4d-4fcc-ad1f-75a315b87d3a)
-
-
-    - 
     - We calculated conditional probabilities in order to get a better idea of the relationship between shuffling and skipping a song.
         - **P(Skipping | Shuffle)** = 0.54
         - **P(Not Skipping | Not Shuffle)** = 0.68
         - **P(Skipping | Not Shuffle)** = 0.32
         - **P(Not Skipping | Shuffle)** = 0.46
 
-
-
 - **Probability of Skipping/Finishing**:
     - ![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
     - We used a predictive model to find this where we looked at each value and gave it an associated value based on whether that number is more associated with Skipping, or finishing the song. This will likely later be adapted into a pdf but for now it is checking the percent at that specific value. The scale on the bottom is how many ms have passed in intervals of 31222.5 for every one, and the y scale is the percentage of those intervals which is skipped or finished based on the graph.
 
-
-
-## Test Plan
-Withhold 20% of data for test, train on data collected in March, and test on data collected in April.
+## Reproducability
+- TO BE FILLED (by Valentina)
