@@ -3,6 +3,4 @@ numpy
 matplotlib
 scikit-learn
 seaborn
-mpl_toolkits
 plotly
-tkinter
