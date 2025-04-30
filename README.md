@@ -46,18 +46,17 @@ Skipify consists of 2 prediction models that predict whether a song/track will b
 
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
-- **Conditional Probability**: ![Screenshot 2025-04-30 143858](https://github.com/user-attachments/assets/64e62c9b-3d6f-4b64-a204-6a31a7443655)
-- ![Screenshot 2025-04-30 143916](https://github.com/user-attachments/assets/2e25b839-9282-4fa4-a8c0-73f2f2b375e4)
-- ![Screenshot 2025-04-30 143844](https://github.com/user-attachments/assets/b191a9a6-8b4d-4fcc-ad1f-75a315b87d3a)
-    - We calculated conditional probabilities in order to get a better idea of the relationship between shuffling and skipping a song.
+- **Conditional Probability**:Below are 3 different graphs each of which better help understand our data, and the probabilistic associations between our data used, and reason_end. It gives conformation that these datasets were important and had some sort of association with our question.
+- ![Screenshot 2025-04-30 143858](https://github.com/user-attachments/assets/64e62c9b-3d6f-4b64-a204-6a31a7443655)
+  - An example of the calculated conditional probabilities in order to get a better idea of the relationship between shuffling and skipping a song are displayed below.
         - **P(Skipping | Shuffle)** = 0.54
         - **P(Not Skipping | Not Shuffle)** = 0.68
         - **P(Skipping | Not Shuffle)** = 0.32
         - **P(Not Skipping | Shuffle)** = 0.46
-
-- **Probability of Skipping/Finishing**:
-    - ![skip](https://github.com/user-attachments/assets/337cb5cd-950c-4c69-9a19-d1a05a337fe0)![finish](https://github.com/user-attachments/assets/b818e52a-381f-4c8d-9bee-5bd9907a70c8)
-    - We used a predictive model to find this where we looked at each value and gave it an associated value based on whether that number is more associated with Skipping, or finishing the song. This will likely later be adapted into a pdf but for now it is checking the percent at that specific value. The scale on the bottom is how many ms have passed in intervals of 31222.5 for every one, and the y scale is the percentage of those intervals which is skipped or finished based on the graph.
+- ![Screenshot 2025-04-30 143916](https://github.com/user-attachments/assets/2e25b839-9282-4fa4-a8c0-73f2f2b375e4)
+  - This graph displays the given reason_start column versus the probability that it was skipped or not, the wide variety and high range of differencces between the reason_starts and there probabilities. This was a key column in understanding our data and this graph gave us great insight to there connections.
+- ![Screenshot 2025-04-30 143844](https://github.com/user-attachments/assets/b191a9a6-8b4d-4fcc-ad1f-75a315b87d3a)
+    - This last graph is one that connects time spent listening to the odds that it was skipped, this has a very clear association intuitively, and as well it can be seen that it has a very high association with whether it is skipped as well.
  
 - **3D Visualization**:
     - We created an interactive visualization that depicts the relationship between reason_start, shuffle, and secs_played on the initial dataset as seen below:
