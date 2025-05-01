@@ -76,7 +76,7 @@ We utilized matplotlib to model various probabilities as well as correlation.
 
 
 ## Reproducability
-- The code is primed to run on an example
+- The code is primed to run on the example data from Kaggle titled "spotify_history.csv". If testing needs to be done on different data, replace any instance of pd.read_csv with the name of the different file.
 - **How to Run (in terminal)**:
     - `make`: creates skipify html
     - `make install`: installs all dependencies from requirements.txt
