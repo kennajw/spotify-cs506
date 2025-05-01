@@ -76,4 +76,10 @@ We utilized matplotlib to model various probabilities as well as correlation.
 
 
 ## Reproducability
-- TO BE FILLED (by Valentina)
+- The code is primed to run on an example
+- **How to Run (in terminal)**:
+    - `make`: creates skipify html
+    - `make install`: installs all dependencies from requirements.txt
+    - `make run`: runs makefile
+    - `open skipify.html`: opens html file in browser
+    - `make clean`: (optional) removes skipify.html from folder directory
