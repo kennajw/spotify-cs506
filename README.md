@@ -2,10 +2,10 @@
 Presentation: https://youtu.be/WOrUYCalHAo
 
 ## Goals
-We aim to successfully predict whether any given song playing on Spotify will be skipped. Our models predict whether a track from a specified artist and album will be skipped and how many ms it will play. We accomplished this by targeting columns of the dataset the ms played and a binary converted column for the reason end (now simply skipped or not skipped). We believe that these insights could be an important tool for Spotify for what songs would be best to share with users.
+We aim to successfully predict whether any given song playing on Spotify will be skipped. Our models predict whether a track from a specified artist and album will be skipped and how many seconds it will play. We accomplished this by targeting columns of the dataset the ms played and a binary converted column for the reason end (now simply skipped or not skipped). We believe that these insights could be an important tool for Spotify for what songs would be best to share with users.
 
 ## Summary
-Skipify consists of 2 prediction models that predict whether a song/track will be skipped and how many ms that song will play based on a dataset that represents a user's Spotify streaming history. For these models, we used a Support Vector Machine (SVM) model, specifically Linear SVC to predict these. Below, we provide info on the dataset itself, cleaning, modeling, evaluation, visualizations, and more!
+Skipify consists of 2 prediction models that predict whether a song/track will be skipped and how many seconds (from a range) that song will play based on a dataset that represents a user's Spotify streaming history. For these models, we used a Support Vector Machine (SVM) model, specifically Linear SVC to predict these. Below, we provide info on the dataset itself, cleaning, modeling, evaluation, visualizations, and more!
 
 ## Dataset
 - **Source**: We will be using the [Spotify Streaming History](https://www.kaggle.com/datasets/sgoutami/spotify-streaming-history) dataset from Kaggle. 
@@ -36,7 +36,7 @@ Skipify consists of 2 prediction models that predict whether a song/track will b
 ## Evaluation:
 - For evaluation, we mainly relied on sklearn.metrics accuracy_score and confusion_matrix functions as well as our visualizations (see section below).
 - **Skipped**:
-    - On the testing set, we were able to achieve a 95.5% accuracy.
+    - On the testing set, we were able to achieve a 95.6% accuracy.
     - Confusion Matrix:
         - ![confusion_matrix_skipped](https://github.com/user-attachments/assets/abd6d298-a80f-4638-9800-679eec26dd3a)
 - **Seconds Played**:
