@@ -21,7 +21,7 @@ Skipify consists of 2 prediction models that predict whether a song/track will b
  Our model trained on 75% of data, keeping 25% for testing our results.
 
 ## Data Cleaning
-- **Data Cleaning**: Cleaned the data for the trackDone column of the dataset to streamline the processing of that specific data, converting it to a csv, which we used in our preliminary decision tree.
+- **Data Cleaning**: Cleaned the data for the track_done column of the dataset to streamline the processing of that specific data, converting it to a csv, which we used in our preliminary decision tree.
 - **Standardization**: Normalize CSV file by extracting the above features using `pandas` or a similar package.
 
 ## Modeling
@@ -46,7 +46,7 @@ Skipify consists of 2 prediction models that predict whether a song/track will b
 
 ## Visualization
 We utilized matplotlib to model various probabilities as well as correlation.
-- **Conditional Probability**:Below are 3 different graphs each of which better help understand our data, and the probabilistic associations between our data used, and reason_end. It gives conformation that these datasets were important and had some sort of association with our question.
+- **Conditional Probability**:Below are 3 different graphs each of which better help understand our data, and the probabilistic associations between our data used, and reason_end. It gives confirmation that these datasets were important and had some sort of association with our question. In the following visualizations, 0 (blue) is played and 1 (grey) is skipped.
 - ![Screenshot 2025-04-30 143858](https://github.com/user-attachments/assets/64e62c9b-3d6f-4b64-a204-6a31a7443655)
   - An example of the calculated conditional probabilities in order to get a better idea of the relationship between shuffling and skipping a song are displayed below.
         - **P(Skipping | Shuffle)** = 0.54
